@@ -1,0 +1,309 @@
+<!DOCTYPE html> <html lang=en class=js>
+<meta charset=utf-8>
+<title>Documentation - Sparrow Wallet</title>
+<meta name=description content="Sparrow is a modern desktop Bitcoin wallet application supporting most hardware wallets and built on common standards such as PSBT, with an emphasis on transparency and usability.">
+<meta property=og:type content=website>
+<meta property=og:locale content=en_US>
+<meta property=og:site_name content="Sparrow Wallet">
+<meta property=og:title content=Documentation>
+<meta property=og:url content=/docs/>
+<meta property=og:description content="Sparrow is a modern desktop Bitcoin wallet application supporting most hardware wallets and built on common standards such as PSBT, with an emphasis on transparency and usability.">
+<link rel=canonical href=/docs/>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Person","name":"Sparrow Wallet","url":"/"}</script>
+<link href=/feed.xml type=application/atom+xml rel=alternate title="Sparrow Wallet Feed">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<style>/*! Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE) */.mfp-container:before{content:"";display:inline-block;height:100%;vertical-align:middle}.mfp-align-top .mfp-container:before{display:none}.mfp-preloader a:hover{color:#fff}button::-moz-focus-inner{padding:0;border:0}.mfp-close:hover,.mfp-close:focus{opacity:1;filter:alpha(opacity=100)}.mfp-close:active{top:1px}.mfp-arrow:active{margin-top:-54px}.mfp-arrow:hover,.mfp-arrow:focus{opacity:1;filter:alpha(opacity=100)}.mfp-arrow:before,.mfp-arrow:after{content:"";display:block;width:0;height:0;position:absolute;left:0;top:0;margin-top:35px;margin-left:35px;border:medium inset transparent}.mfp-arrow:after{border-top-width:13px;border-bottom-width:13px;top:8px}.mfp-arrow:before{border-top-width:21px;border-bottom-width:21px;opacity:0.7}.mfp-arrow-left:after{border-right:17px solid #fff;margin-left:31px}.mfp-arrow-left:before{margin-left:25px;border-right:27px solid #fff}.mfp-arrow-right:after{border-left:17px solid #fff;margin-left:39px}.mfp-arrow-right:before{border-left:27px solid #fff}.mfp-figure:after{content:"";position:absolute;left:0;top:40px;bottom:40px;display:block;right:0;width:auto;height:auto;z-index:-1;box-shadow:0 0 8px rgba(0,0,0,0.6);background:#444}@media screen and (max-width:800px) and (orientation:landscape),screen and (max-height:300px){.mfp-img-mobile .mfp-figure:after{top:0;bottom:0}}button:focus,a:focus{outline:thin dotted #6f777d;outline:5px auto #6f777d;outline-offset:-2px}*{box-sizing:border-box}html{box-sizing:border-box;background-color:#fff;font-size:16px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}@media (min-width:48em){html{font-size:18px}}@media (min-width:64em){html{font-size:20px}}@media (min-width:80em){html{font-size:22px}}::-moz-selection{color:#fff;background:#000}::selection{color:#fff;background:#000}article,footer,header,nav,section{display:block}a{color:#2f7d95}a:hover,a:active{outline:0}button,input{margin:0;font-size:100%}button,input{*overflow:visible;line-height:normal}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}button{-webkit-appearance:button}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}html{position:relative;min-height:100%}body{margin:0;padding:0;color:#3d4144;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;line-height:1.5}h1,h2,h3{margin:2em 0 0.5em;line-height:1.2;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-weight:bold}h2{font-size:1.25em}h3{font-size:1.125em}p{margin-bottom:1.3em}p,ul{orphans:3;widows:3}blockquote cite:before{content:"—";padding-right:5px}a:visited{color:#4e91a5}a:hover{color:#235e70;outline:0}p>code:before,p>code:after,a>code:before,a>code:after,li>code:before,li>code:after,figcaption>code:before,figcaption>code:after,td>code:before,td>code:after{letter-spacing:-0.2em;content:" "}ul li{margin-bottom:0.5em}figcaption a:hover{color:#235e70}nav ul{margin:0;padding:0}nav li{list-style:none}nav a{text-decoration:none}nav ul li{margin-bottom:0}nav li ul{margin-top:0}i,strong,p,span,h1,h2,header,input,a{-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out}label,input,button{vertical-align:baseline;*vertical-align:middle}input,button{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}label{margin-bottom:0.25em;color:#3d4144;cursor:pointer}input{margin-bottom:0.5em;color:#3d4144;background-color:#fff}input[type="checkbox"]{width:auto;height:auto;margin:3px 0;*margin-top:0;line-height:normal;cursor:pointer;border-radius:0;border:0 \9;box-shadow:none}input[type="checkbox"]{box-sizing:border-box;padding:0;*width:13px;*height:13px}input:focus,textarea:focus{border-color:#6f777d;outline:0;outline:thin dotted \9;box-shadow:inset 0 1px 3px rgba(61,65,68,0.06),0 0 5px rgba(111,119,125,0.7)}input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,select:focus{box-shadow:none}.form--loading:before{content:""}.form:before{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,0.7);z-index:10}@-webkit-keyframes intro{0%{opacity:0}100%{opacity:1}}@keyframes intro{0%{opacity:0}100%{opacity:1}}.btn--primary:visited{background-color:#6f777d;color:#fff}.btn--primary:hover{background-color:#595f64;color:#fff}.btn--inverse:visited{background-color:#fff;color:#3d4144}.btn--inverse:hover{background-color:#cccccc;color:#3d4144}.btn--light-outline:visited{background-color:transparent;color:#fff}.btn--light-outline:hover{background-color:rgba(0,0,0,0.2);color:#fff}.btn--success:visited{background-color:#3fa63f;color:#fff}.btn--success:hover{background-color:#328532;color:#fff}.btn--warning:visited{background-color:#d67f05;color:#fff}.btn--warning:hover{background-color:#ab6604;color:#fff}.btn--danger:visited{background-color:#ee5f5b;color:#fff}.btn--danger:hover{background-color:#be4c49;color:#fff}.btn--info:visited{background-color:#3b9cba;color:#fff}.btn--info:hover{background-color:#2f7d95;color:#fff}.btn--facebook:visited{background-color:#3b5998;color:#fff}.btn--facebook:hover{background-color:#2f477a;color:#fff}.btn--twitter:visited{background-color:#55acee;color:#fff}.btn--twitter:hover{background-color:#448abe;color:#fff}.btn--linkedin:visited{background-color:#007bb6;color:#fff}.btn--linkedin:hover{background-color:#006292;color:#fff}.notice a:hover{color:#717476}.notice--primary a:hover{color:#43474b}.notice--info a:hover{color:#235e70}.notice--warning a:hover{color:#804c03}.notice--success a:hover{color:#266426}.notice--danger a:hover{color:#8f3937}.masthead{position:relative;-webkit-animation:intro 0.3s both;animation:intro 0.3s both;-webkit-animation-delay:0.15s;animation-delay:0.15s;z-index:20}.masthead__inner-wrap{clear:both;margin-left:auto;margin-right:auto;padding:1em;max-width:100%;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}.masthead__inner-wrap::after{clear:both;content:"";display:table}.masthead__inner-wrap nav{z-index:10}.site-title{-ms-flex-item-align:center;align-self:center;font-weight:bold}.site-subtitle{display:block;font-size:0.625em}.masthead__menu{float:left;margin-left:0;margin-right:0;width:100%;clear:both}.masthead__menu ul{margin:0;padding:0;clear:both;list-style-type:none}.masthead__menu-item{display:block;list-style-type:none;white-space:nowrap}.breadcrumbs::after{clear:both;content:"";display:table}.pagination::after{clear:both;content:"";display:table}.pagination li a:hover{color:#235e70}.pagination--pager:hover{background-color:#646769;color:#fff}.greedy-nav{position:relative;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:2em}.greedy-nav a{display:block;margin:0 1rem;color:#6f777d;text-decoration:none}.greedy-nav a:hover{color:#53595e}.greedy-nav a.site-title{margin-left:0}.greedy-nav__toggle{-ms-flex-item-align:center;align-self:center;height:2rem;border:0;outline:none;background-color:transparent;cursor:pointer}.greedy-nav .visible-links{display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-flex:1;-ms-flex:1;flex:1;overflow:hidden}.greedy-nav .visible-links li{-webkit-box-flex:0;-ms-flex:none;flex:none}.greedy-nav .visible-links a{position:relative}.greedy-nav .visible-links a:before{content:"";position:absolute;left:0;bottom:0;height:4px;background:#6f777d;width:100%;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;-webkit-transform:scaleX(0) translate3d(0,0,0);transform:scaleX(0) translate3d(0,0,0)}.greedy-nav .visible-links a:hover:before{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}.greedy-nav .hidden-links{position:absolute;top:100%;right:0;margin-top:15px;padding:5px;border:1px solid #f2f3f3;border-radius:4px;background:#fff;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}.greedy-nav .hidden-links a:hover{color:#53595e;background:#dbdddf}.greedy-nav .hidden-links:before{content:"";position:absolute;top:-11px;right:10px;width:0;border-style:solid;border-width:0 10px 10px;border-color:#f2f3f3 transparent;display:block;z-index:0}.greedy-nav .hidden-links:after{content:"";position:absolute;top:-10px;right:10px;width:0;border-style:solid;border-width:0 10px 10px;border-color:#fff transparent;display:block;z-index:1}@media (max-width:63.9375em){.nav__list label{position:relative;display:inline-block;padding:0.5em 2.5em 0.5em 1em;color:#7a8288;font-size:0.75em;font-weight:bold;border:1px solid #bdc1c4;border-radius:4px;z-index:20;-webkit-transition:0.2s ease-out;transition:0.2s ease-out;cursor:pointer}.nav__list label:before,.nav__list label:after{content:"";position:absolute;right:1em;top:1.25em;width:0.75em;height:0.125em;line-height:1;background-color:#7a8288;-webkit-transition:0.2s ease-out;transition:0.2s ease-out}.nav__list label:after{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.nav__list label:hover{color:#fff;border-color:#7a8288;background-color:#333333}.nav__list label:hover:before,.nav__list label:hover:after{background-color:#fff}.nav__list input:checked+label:before,.nav__list input:checked+label:after{background-color:#fff}.nav__list label:hover:after{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.nav__list input:checked+label:hover:after{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}.nav__list ul{margin-bottom:1em}.nav__list a{display:block;padding:0.25em 0}}@media (max-width:63.9375em) and (min-width:64em){.nav__list a{padding-top:0.125em;padding-bottom:0.125em}}@media (max-width:63.9375em){.nav__list a:hover{text-decoration:underline}}.nav__list .nav__items{margin:0;font-size:1.25rem}.nav__list .nav__items a{color:inherit}@media (max-width:63.9375em){.nav__list .nav__items{position:relative;max-height:0;opacity:0%;overflow:hidden;z-index:10;-webkit-transition:0.3s ease-in-out;transition:0.3s ease-in-out;-webkit-transform:translate(0,10%);-ms-transform:translate(0,10%);transform:translate(0,10%)}}.nav__sub-title{display:block;margin:0.5rem 0;padding:0.25rem 0;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:0.75em;font-weight:bold;text-transform:uppercase;border-bottom:1px solid #f2f3f3}.toc__menu a:hover{color:#3d4144}.page__footer{float:left;margin-left:0;margin-right:0;width:100%;clear:both;margin-top:3em;color:#646769;-webkit-animation:intro 0.3s both;animation:intro 0.3s both;-webkit-animation-delay:0.45s;animation-delay:0.45s;background-color:#f2f3f3}.page__footer::after{clear:both;content:"";display:table}.page__footer footer{clear:both;margin-left:auto;margin-right:auto;margin-top:2em;max-width:100%;padding:0 1em 2em}.page__footer footer::after{clear:both;content:"";display:table}@media (min-width:80em){.page__footer footer{max-width:1280px}}.page__footer a:hover{text-decoration:underline}.page__footer-copyright{font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:0.6875em}.page__footer-follow ul{margin:0;padding:0;list-style-type:none}.page__footer-follow li+li:before{content:"";padding-right:5px}.search__toggle:hover{color:#53595e}.search-content.is--visible::after{content:"";display:block}.hidden{visibility:hidden}.screen-reader-text,.screen-reader-shortcut{position:absolute!important;clip:rect(1px,1px,1px,1px);height:1px!important;width:1px!important;border:0!important;overflow:hidden}body:hover .visually-hidden a,body:hover .visually-hidden input,body:hover .visually-hidden button{display:none!important}.screen-reader-text:focus,.screen-reader-shortcut:focus{clip:auto!important;height:auto!important;width:auto!important;display:block;font-size:1em;font-weight:bold;padding:15px 23px 14px;background:#fff;z-index:100000;text-decoration:none;box-shadow:0 0 2px 2px rgba(0,0,0,0.6)}.navicon:before,.navicon:after{content:"";position:absolute;left:0;width:1.5rem;height:0.25rem;background:#6f777d;-webkit-transition:0.3s;transition:0.3s}.navicon:before{top:-0.5rem}.navicon:after{bottom:-0.5rem}.close .navicon:before,.close .navicon:after{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;top:0;width:1.5rem}.close .navicon:before{-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg)}.close .navicon:after{-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg)}@supports (pointer-events:none){.greedy-nav__toggle:before{content:"";position:fixed;top:0;left:0;width:100%;height:100%;opacity:0;background-color:#fff;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;pointer-events:none}}.greedy-nav__toggle.close:before{opacity:0.9;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;pointer-events:auto}.greedy-nav__toggle:hover .navicon,.greedy-nav__toggle:hover .navicon:before,.greedy-nav__toggle:hover .navicon:after{background:#53595e}.greedy-nav__toggle.close:hover .navicon{background:transparent}@media (min-width:64em){.sticky{clear:both;position:sticky;top:2em}.sticky::after{clear:both;content:"";display:table}.sticky>*{display:block}}.show-modal:before{position:absolute;content:"";top:0;left:0;width:100%;height:100%;z-index:999;background-color:rgba(255,255,255,0.85)}a.reversefootnote:hover{text-decoration:underline}#main{clear:both;margin-left:auto;margin-right:auto;padding-left:1em;padding-right:1em;-webkit-animation:intro 0.3s both;animation:intro 0.3s both;max-width:100%;-webkit-animation-delay:0.15s;animation-delay:0.15s}#main::after{clear:both;content:"";display:table}@media (min-width:80em){#main{max-width:1280px}}body{display:flex;min-height:100vh;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.initial-content{flex:1 0 auto}@media (min-width:64em){.page{float:right;width:calc(100% - 200px)}}@media (min-width:80em){.page{width:calc(100% - 300px)}}.page .page__inner-wrap{float:left;margin-top:1em;margin-left:0;margin-right:0;width:100%;clear:both}.page .page__inner-wrap .page__content,.page .page__inner-wrap .page__meta{position:relative;float:left;margin-left:0;margin-right:0;width:100%;clear:both}.page__title{margin-top:0;line-height:1}.page__content h3 .header-link{position:relative;left:0.5em;opacity:0;font-size:0.8em;-webkit-transition:opacity 0.2s ease-in-out 0.1s;-moz-transition:opacity 0.2s ease-in-out 0.1s;-o-transition:opacity 0.2s ease-in-out 0.1s;transition:opacity 0.2s ease-in-out 0.1s}.page__content h1:hover .header-link,.page__content h2:hover .header-link,.page__content h3:hover .header-link,.page__content h4:hover .header-link,.page__content h5:hover .header-link,.page__content h6:hover .header-link{opacity:1}.page__content p{margin:0 0 1.3em}.page__content a:not(.btn):not(#goog-wm-sb):hover{text-decoration:underline}.page__content a:not(.btn):not(#goog-wm-sb):hover img{box-shadow:0 0 10px rgba(0,0,0,0.25)}.page__hero::after{clear:both;content:"";display:table}.page__hero--overlay::after{clear:both;content:"";display:table}.page__meta{margin-top:2em;color:#646769;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:0.75em}.page__taxonomy-item:hover{text-decoration:none;color:#235e70}.comment::after{clear:both;content:"";display:table}.page__related::after{clear:both;content:"";display:table}@media (min-width:64em){.wide .page{padding-right:0}}@media (min-width:80em){.wide .page{padding-right:0}}.archive__item-title a[rel="permalink"]::before{content:"";position:absolute;left:0;top:0;right:0;bottom:0}.feature__wrapper::after{clear:both;content:"";display:table}.feature__item a.btn::before,.feature__item a#goog-wm-sb::before{content:"";position:absolute;left:0;top:0;right:0;bottom:0}.feature__item--left a.btn::before,.feature__item--left a#goog-wm-sb::before{content:"";position:absolute;left:0;top:0;right:0;bottom:0}.feature__item--right a.btn::before,.feature__item--right a#goog-wm-sb::before{content:"";position:absolute;left:0;top:0;right:0;bottom:0}.feature__item--center a.btn::before,.feature__item--center a#goog-wm-sb::before{content:"";position:absolute;left:0;top:0;right:0;bottom:0}.sidebar{clear:both}.sidebar::after{clear:both;content:"";display:table}@media (min-width:64em){.sidebar{float:left;width:calc(200px - 1em);opacity:0.75;-webkit-transition:opacity 0.2s ease-in-out;transition:opacity 0.2s ease-in-out}.sidebar:hover{opacity:1}.sidebar.sticky{overflow-y:auto;max-height:calc(100vh - 2em - 2em)}}@media (min-width:80em){.sidebar{width:calc(300px - 1em)}}.sidebar>*{margin-top:1em;margin-bottom:1em}.sidebar li{font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:0.75em;line-height:1.5}@media (min-width:64em){.sidebar__right.sticky::after{clear:both;content:"";display:table}}@supports (pointer-events:none){.author__urls-wrapper button:before{content:"";position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none}}.author__urls-wrapper button.open:before{pointer-events:auto}.author__urls:before{display:block;content:"";position:absolute;top:-11px;left:calc(50% - 10px);width:0;border-style:solid;border-width:0 10px 10px;border-color:#f2f3f3 transparent;z-index:0}@media (min-width:64em){.author__urls:before{display:none}}.author__urls:after{display:block;content:"";position:absolute;top:-10px;left:calc(50% - 10px);width:0;border-style:solid;border-width:0 10px 10px;border-color:#fff transparent;z-index:1}@media (min-width:64em){.author__urls:after{display:none}}.author__urls a:hover{text-decoration:underline}.greedy-nav,.masthead,.page__footer{background:none}body{background-color:#f9f9f9}@media (min-width:80em){.masthead__inner-wrap{max-width:1280px}}.masthead{border-bottom:1px solid #b5b5b5}h1{font-size:1.463em}.page__content p,.page__content li{font-size:0.75em}@media (max-width:64em){.page__content p,.page__content li{font-size:1em}}.site-subtitle{margin-right:50px}.btn--info:visited{background-color:#1e88cf;color:#fff}.btn--secondary:visited{background-color:#aaa;color:#fff}.btn--secondary:hover{color:#fff}</style>
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+<meta itemprop=headline content=Documentation><meta name=referrer content=no-referrer><link type=image/x-icon rel="shortcut icon" href="data:image/x-icon;base64,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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"></head>
+ <body class="layout--single wide">
+ <nav class=skip-links>
+ <h2 class=screen-reader-text>Skip links</h2>
+ <ul>
+ <li><a href=#site-nav class=screen-reader-shortcut>Skip to primary navigation</a></li>
+ <li><a href=#main class=screen-reader-shortcut>Skip to content</a></li>
+ <li><a href=#footer class=screen-reader-shortcut>Skip to footer</a></li>
+ </ul>
+</nav>
+ <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+ 
+<div class=masthead>
+ <div class=masthead__inner-wrap>
+ <div class=masthead__menu>
+ <nav id=site-nav class=greedy-nav>
+ 
+ <a class=site-title href=/>
+ Sparrow Wallet
+ <span class=site-subtitle>Financial self sovereignty</span>
+ </a>
+ <ul class=visible-links><li class=masthead__menu-item>
+ <a href=/>Home</a>
+ <li class=masthead__menu-item>
+ <a href=/features/>Features</a>
+ <li class=masthead__menu-item>
+ <a href=/docs/>Docs</a>
+ <li class=masthead__menu-item>
+ <a href=/about/>About</a>
+ <li class=masthead__menu-item>
+ <a href=/donate/>Donate</a>
+ <li class=masthead__menu-item>
+ <a href=/download/>Download</a>
+ </ul>
+ 
+ <button class="greedy-nav__toggle hidden sf-hidden" type=button count=0>
+ 
+ 
+ </button>
+ <ul class="hidden-links hidden sf-hidden"></ul>
+ </nav>
+ </div>
+ </div>
+</div>
+ <div class=initial-content>
+ 
+<div id=main role=main>
+ 
+ <div class="sidebar sticky">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<nav class=nav__list>
+ 
+ <input id=ac-toc name=accordion-toc type=checkbox value=on class=sf-hidden>
+ <label for=ac-toc class=sf-hidden>Toggle Menu</label>
+ <ul class=nav__items>
+ 
+ <li>
+ 
+ <a href=/docs/quick-start.html><span class=nav__sub-title>Quick Start Guide</span></a>
+ 
+ 
+ <ul>
+ 
+ <li><a href=/docs/quick-start.html#installation>Installation</a></li>
+ 
+ <li><a href=/docs/quick-start.html#welcome-to-sparrow>Welcome to Sparrow</a></li>
+ 
+ <li><a href=/docs/quick-start.html#sparrow-server-setup>Sparrow Server Setup</a></li>
+ 
+ <li><a href=/docs/quick-start.html#creating-your-first-wallet>Creating Your First Wallet</a></li>
+ 
+ </ul>
+ 
+ </li>
+ 
+ <li>
+ 
+ <a href=/docs/connect-node.html><span class=nav__sub-title>Connect to Bitcoin Core</span></a>
+ 
+ 
+ <ul>
+ 
+ <li><a href=/docs/connect-node.html#prerequistes>Prerequistes</a></li>
+ 
+ <li><a href=/docs/connect-node.html#bitcoin-core-setup>Bitcoin Core setup</a></li>
+ 
+ <li><a href=/docs/connect-node.html#sparrow-wallet-setup>Sparrow Wallet setup</a></li>
+ 
+ <li><a href=/docs/connect-node.html#creating-your-wallet>Creating your Wallet</a></li>
+ 
+ </ul>
+ 
+ </li>
+ 
+ <li>
+ 
+ <a href=/docs/coldcard-wallet.html><span class=nav__sub-title>Setup a Coldcard wallet</span></a>
+ 
+ 
+ <ul>
+ 
+ <li><a href=/docs/coldcard-wallet.html#prerequistes>Prerequistes</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#why-use-hardware-wallet>Why use a hardware wallet?</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#why-coldcard>Why Coldcard?</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#ordering-and-receiving>Ordering and receiving</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#setting-up-your-coldcard>Setting up your Coldcard</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#creating-the-wallet-on-the-coldcard>Creating the wallet on the Coldcard</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#importing-the-coldcard-into-sparrow>Importing the Coldcard into Sparrow</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#receiving-bitcoin>Receiving Bitcoin</a></li>
+ 
+ <li><a href=/docs/coldcard-wallet.html#sending-bitcoin>Sending Bitcoin</a></li>
+ 
+ </ul>
+ 
+ </li>
+ 
+ <li>
+ 
+ <a href=/docs/spending-privately.html><span class=nav__sub-title>Spending Privately</span></a>
+ 
+ 
+ <ul>
+ 
+ <li><a href=/docs/spending-privately.html#prerequistes>Prerequistes</a></li>
+ 
+ <li><a href=/docs/spending-privately.html#why-is-this-necessary>Why is this necessary?</a></li>
+ 
+ <li><a href=/docs/spending-privately.html#fake-two-person-coinjoin>Fake two person coinjoin</a></li>
+ 
+ <li><a href=/docs/spending-privately.html#paynym-payment-code>PayNym? Payment code?</a></li>
+ 
+ <li><a href=/docs/spending-privately.html#paying-to-paynym>Paying to a PayNym</a></li>
+ 
+ <li><a href=/docs/spending-privately.html#conclusion>Conclusion</a></li>
+ 
+ </ul>
+ 
+ </li>
+ 
+ <li>
+ 
+ <a href=/docs/best-practices.html><span class=nav__sub-title>Best Practices</span></a>
+ 
+ 
+ <ul>
+ 
+ <li><a href=/docs/best-practices.html#how-to-store-bitcoin>How to Store Bitcoin</a></li>
+ 
+ <li><a href=/docs/best-practices.html#how-much-are-you-storing>How Much Are You Storing?</a></li>
+ 
+ <li><a href=/docs/best-practices.html#summary>Summary</a></li>
+ 
+ <li><a href=/docs/best-practices.html#the-beginner-stage>The Beginner Stage</a></li>
+ 
+ <li><a href=/docs/best-practices.html#the-intermediate-stage>The Intermediate Stage</a></li>
+ 
+ <li><a href=/docs/best-practices.html#the-expert-stage>The Expert Stage</a></li>
+ 
+ </ul>
+ 
+ </li>
+ 
+ <li>
+ 
+ <a href=/docs/faq.html><span class=nav__sub-title>FAQ</span></a>
+ 
+ 
+ </li>
+ 
+ <li>
+ 
+ <a href=/docs/server-performance.html><span class=nav__sub-title>Server Performance</span></a>
+ 
+ 
+ </li>
+ 
+ </ul>
+</nav>
+ 
+ 
+ 
+ </div>
+ <article class=page itemscope itemtype=https://schema.org/CreativeWork>
+ 
+ 
+ 
+ 
+ <div class=page__inner-wrap>
+ 
+ <header>
+ <h1 id=page-title class=page__title itemprop=headline>Documentation
+</h1>
+ 
+ </header>
+ 
+ <section class=page__content itemprop=text>
+ 
+ <h3 id=quick-start-guide><a href=/docs/quick-start.html>Quick Start Guide</a><a class=header-link href=#quick-start-guide title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>A great place to start. Contains an explanation of how to setup Sparrow to connect to a public server, and create your first wallet.</p>
+<h3 id=connect-to-bitcoin-core><a href=/docs/connect-node.html>Connect to Bitcoin Core</a><a class=header-link href=#connect-to-bitcoin-core title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>Make your wallet private by connecting Sparrow to your Bitcoin Core node using this guide.</p>
+<h3 id=setup-a-coldcard-wallet><a href=/docs/coldcard-wallet.html>Setup a Coldcard wallet</a><a class=header-link href=#setup-a-coldcard-wallet title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>Secure your bitcoin by using Sparrow with a Coldcard hardware wallet.</p>
+<h3 id=spending-privately><a href=/docs/spending-privately.html>Spending Privately</a><a class=header-link href=#spending-privately title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>Learn how to protect your privacy when spending from Sparrow.</p>
+<h3 id=best-practices><a href=/docs/best-practices.html>Best Practices</a><a class=header-link href=#best-practices title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>Learn which Sparrow configuration is best for you at each stage in your Bitcoin journey.</p>
+<h3 id=frequently-asked-questions><a href=/docs/faq.html>Frequently Asked Questions</a><a class=header-link href=#frequently-asked-questions title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>Reading this may help you figure something out, or improve your understanding and usage.</p>
+<h3 id=server-performance><a href=/docs/server-performance.html>Server Performance</a><a class=header-link href=#server-performance title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>Compare and contrast popular Electrum server implementations for your needs.</p>
+<h3 id=contributed>Contributed<a class=header-link href=#contributed title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<ul>
+ <li><a href="https://www.youtube.com/watch?v=yJpvfRl03Tw" target=_blank class=lightbox-youtube data-id=yJpvfRl03Tw>Why You Need Sparrow Bitcoin Wallet NOW</a> by <a href=https://x.com/BTCSessions target=_blank>@BTCSessions</a> <strong>(Recommended!)</strong></li>
+ <li><a href="https://www.youtube.com/watch?v=ppZ9cPvGTVU" target=_blank class=lightbox-youtube data-id=ppZ9cPvGTVU>Unlock Sparrow Bitcoin Wallet’s Hidden Power: Advanced Features Tutorial</a> by <a href=https://x.com/BTCSessions target=_blank>@BTCSessions</a></li>
+ <li><a href=https://youtu.be/9dcXXz1CHV8 target=_blank class=lightbox-youtube data-id=9dcXXz1CHV8>Sparrow Wallet Walkthrough</a> by <a href=https://x.com/ministryofnodes target=_blank>@ministryofnodes</a></li>
+ <li><a href=https://www.athena-alpha.com/how-to-send-bitcoin/ target=_blank>How To Send Bitcoin</a> by <a href=https://x.com/athena_alpha_ target=_blank>@athena_alpha_</a></li>
+ <li><a href=https://youtu.be/qJ_SpQX_YKw target=_blank class=lightbox-youtube data-id=qJ_SpQX_YKw>SeedSigner and Sparrow Wallet</a> by <a href=https://x.com/BTCSessions target=_blank>@BTCSessions</a></li>
+ <li><a href=https://bitcoiner.guide/sparrow/ target=_blank>Bitcoiner Guide - Sparrow Wallet 101</a> by <a href=https://x.com/BitcoinQ_A target=_blank>@BitcoinQ_A</a></li>
+ <li><a href=https://bitcoinmagazine.com/guides/bitcoin-wallets-for-beginners-part-four-installing-sparrow-wallet target=_blank>Bitcoin Wallets For Beginners - Installing Sparrow Wallet</a> by <a href=https://x.com/econoalchemist target=_blank>@econoalchemist</a></li>
+ <li><a href="https://www.youtube.com/watch?v=7EmshGDXi04" target=_blank class=lightbox-youtube data-id=7EmshGDXi04>Bitcoin Replace By Fee and Child Pays For Parent Tutorial using Sparrow Wallet</a> by <a href=https://x.com/w_s_bitcoin target=_blank>@Wicked</a></li>
+ <li><a href=https://bitcoinmagazine.com/technical/how-to-use-passport-hardware-bitcoin-wallet target=_blank>How to setup and secure your Bitcoin with Foundation Passport wallet (and Sparrow)</a> by <a href=https://x.com/econoalchemist target=_blank>@econoalchemist</a></li>
+ <li><a href="https://www.youtube.com/watch?v=QiX0rR_o_fI" target=_blank class=lightbox-youtube data-id=QiX0rR_o_fI>Setup and run an ElectrumX server</a> by <a href=https://x.com/ministryofnodes target=_blank>@ministryofnodes</a></li>
+ <li><a href="https://www.youtube.com/watch?v=SpQRrbJt7cg" target=_blank class=lightbox-youtube data-id=SpQRrbJt7cg>Setup and run an Fulcrum server</a> by <a href=https://x.com/ministryofnodes target=_blank>@ministryofnodes</a></li>
+</ul>
+<h3 id=support>Support<a class=header-link href=#support title=Permalink><span class=sr-only>Permalink</span><i class="fa fa-link"></i></a></h3>
+<p>As an open source project Sparrow Wallet does not have a support team. 
+Instead, there is an active community-managed Telegram group: <a href=https://telegram.me/SparrowWallet target=_blank>@SparrowWallet</a>.</p>
+<p>Please be aware that there are many scammers on Telegram! The group admins (or “Sparrow support”) <strong>will not DM you</strong>.</p>
+ 
+ </section>
+ <footer class=page__meta>
+ 
+ 
+ 
+ </footer>
+ 
+ 
+ </div>
+ 
+ </article>
+ 
+ 
+</div>
+ </div>
+ 
+ <div id=footer class=page__footer>
+ <footer>
+ 
+ <div class=page__footer-follow>
+ <ul class=social-icons>
+ 
+ 
+ 
+ </ul>
+</div>
+<div class=page__footer-copyright>© 2025 Sparrow Wallet. Sparrow is licensed under the Apache 2 software licence.</div>
+<style>#lightbox{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.85);z-index:9999999;line-height:0;cursor:pointer}#lightbox #close:after,#lightbox #close:before{position:absolute;margin-top:22px;margin-left:14px;content:"";height:3px;background:white;width:23px;-webkit-transform-origin:50% 50%;-moz-transform-origin:50% 50%;-o-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg)}#lightbox #close:after{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg)}#lightbox{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}</style>
+ </footer>
+ </div>
+ 
+ 
+ 
+ 
+<div id=lightbox class=sf-hidden></div>
